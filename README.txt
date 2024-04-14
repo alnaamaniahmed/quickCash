@@ -1,1 +1,1 @@
-Temporary Repository for Quick Cash.
+Temporary Repository for Quick Cash Project.
