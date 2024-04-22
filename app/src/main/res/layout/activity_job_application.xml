@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/menuHolder"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuHolder">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/jobTitle"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:text="@string/HINT_JOB_TITLE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/employerEmail" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/questionRecycler"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                app:layout_constraintEnd_toEndOf="@+id/salary"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/dollarSignText"
+                app:layout_constraintTop_toBottomOf="@+id/salary" />
+
+            <TextView
+                android:id="@+id/errorMessage"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="bottom"
+                android:textColor="@color/soft_error_red"
+                app:layout_constraintBottom_toTopOf="@+id/employerEmail"
+                app:layout_constraintStart_toStartOf="@+id/employerEmail" />
+
+            <TextView
+                android:id="@+id/jobApplicationTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="@string/JOB_APPLICATION"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/jobType"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:text="@string/JOB_TYPE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/jobTitle" />
+
+            <TextView
+                android:id="@+id/jobLocationText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text="@string/JOB_LOCATION_DEMO"
+                app:layout_constraintEnd_toEndOf="@+id/jobDescription"
+                app:layout_constraintStart_toStartOf="@+id/jobDescription"
+                app:layout_constraintTop_toBottomOf="@+id/jobDescription" />
+
+            <TextView
+                android:id="@+id/dollarSignText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/salary"
+                app:layout_constraintStart_toStartOf="@+id/jobLocationText"
+                app:layout_constraintTop_toTopOf="@+id/salary" />
+
+            <TextView
+                android:id="@+id/salary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="35dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toEndOf="@+id/jobLocationText"
+                app:layout_constraintStart_toEndOf="@+id/dollarSignText"
+                app:layout_constraintTop_toBottomOf="@+id/jobLocationText" />
+
+            <Button
+                android:id="@+id/applyButton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="196dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/cash_green_dark"
+                android:text="@string/APPLY"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/questionRecycler"
+                app:layout_constraintTop_toBottomOf="@+id/uploadPDF" />
+
+            <Button
+                android:id="@+id/cancelJobButton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="46dp"
+                android:backgroundTint="#CF800A"
+                android:text="@string/CANCEL"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/applyButton"
+                app:layout_constraintTop_toTopOf="@+id/applyButton" />
+
+            <TextView
+                android:id="@+id/employerEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/EMPLOYER_EMAIL"
+                app:layout_constraintEnd_toEndOf="@+id/jobTitle"
+                app:layout_constraintStart_toStartOf="@+id/jobTitle"
+                app:layout_constraintTop_toBottomOf="@+id/jobApplicationTitle" />
+
+            <Button
+                android:id="@+id/uploadPDF"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/SELECT_PDF"
+                android:textColor="#0000FF"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/salary"
+                app:layout_constraintStart_toStartOf="@+id/dollarSignText"
+                app:layout_constraintTop_toBottomOf="@+id/questionRecycler" />
+
+            <TextView
+                android:id="@+id/jobQuestionsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Job Questions"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/questionRecycler"
+                app:layout_constraintStart_toStartOf="@+id/questionRecycler" />
+
+            <TextView
+                android:id="@+id/salaryLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Salary"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/dollarSignText"
+                app:layout_constraintStart_toStartOf="@+id/dollarSignText" />
+
+            <TextView
+                android:id="@+id/locationLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/jobLocationText"
+                app:layout_constraintStart_toStartOf="@+id/jobLocationText" />
+
+            <TextView
+                android:id="@+id/jobDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="@+id/jobTitle"
+                app:layout_constraintStart_toStartOf="@+id/jobTitle"
+                app:layout_constraintTop_toBottomOf="@+id/jobType" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/HINT_JOB_DESCRIPTION"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/jobDescription"
+                app:layout_constraintStart_toStartOf="@+id/jobDescription" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

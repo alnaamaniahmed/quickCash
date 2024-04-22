@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="397dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:text="Welcome, "
+        android:textAlignment="center"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="72dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/ongoingLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hiringScrollView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="63dp"
+        android:layout_marginEnd="88dp"
+        android:text="Ongoing"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeTextView" />
+
+    <ScrollView
+        android:id="@+id/ongoingScrollView"
+        android:layout_width="164dp"
+        android:layout_height="130dp"
+        android:layout_below="@id/ongoingLabel"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/rounded_corners_cash_dark_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ongoingLabel">
+
+        <LinearLayout
+            android:id="@+id/ongoingList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Dynamic List Items will be added here -->
+            <!-- Dummy List Item 1 -->
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/hiringLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="63dp"
+        android:text="Hiring"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeTextView" />
+
+    <ScrollView
+        android:id="@+id/hiringScrollView"
+        android:layout_width="164dp"
+        android:layout_height="130dp"
+        android:layout_below="@id/hiringLabel"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_corners_gold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hiringLabel">
+
+        <LinearLayout
+            android:id="@+id/hiringList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Dynamic List Items will be added here -->
+            <!-- Dummy List Item 1 -->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/applicationsLabel"
+        android:layout_width="291dp"
+        android:layout_height="23dp"
+        android:layout_below="@id/ongoingScrollView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="35dp"
+        android:text="Received Applications"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ongoingScrollView" />
+
+    <ScrollView
+        android:id="@+id/applicationsScrollView"
+        android:layout_width="344dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/applicationsLabel"
+        android:layout_marginEnd="38dp"
+        android:background="@drawable/rounded_corners_silver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/applicationsLabel">
+
+        <LinearLayout
+            android:id="@+id/applicationsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Dynamic List Items will be added here -->
+            <!-- Dummy List Item 1 -->
+            <!--            <ListView-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:id="@+id/recievedApplicatonisList"-->
+            <!--                ></ListView>-->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/preferredEmployeesButton"
+        android:layout_width="304dp"
+        android:layout_height="49dp"
+        android:layout_below="@id/applicationsScrollView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="36dp"
+        android:backgroundTint="@color/cash_green_dark"
+        android:text="Your Preferred Employees"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/applicationsScrollView" />
+
+    <Button
+        android:id="@+id/postJobButton"
+        android:layout_width="115dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="52dp"
+        android:backgroundTint="@color/cash_green_dark"
+        android:text="@string/POST_JOB"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/preferredEmployeesButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>

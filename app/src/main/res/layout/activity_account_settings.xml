@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/menuHolder"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuHolder"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/accountSettingsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:text="@string/TITLE_ACCOUNT_SETTINGS"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/primaryLayout"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="52dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.508"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/accountSettingsTitle">
+
+                <TextView
+                    android:id="@+id/infoTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Personal Information"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/roleTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Role: "
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/infoTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/infoTitle" />
+
+                <TextView
+                    android:id="@+id/roleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="roleText"
+                    app:layout_constraintBottom_toBottomOf="@+id/roleTitle"
+                    app:layout_constraintStart_toEndOf="@+id/roleTitle"
+                    app:layout_constraintTop_toTopOf="@+id/roleTitle" />
+
+                <TextView
+                    android:id="@+id/emailTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Email: "
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/roleTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/roleTitle" />
+
+                <TextView
+                    android:id="@+id/emailText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="emailText"
+                    app:layout_constraintBottom_toBottomOf="@+id/emailTitle"
+                    app:layout_constraintStart_toEndOf="@+id/emailTitle"
+                    app:layout_constraintTop_toTopOf="@+id/emailTitle" />
+
+                <TextView
+                    android:id="@+id/nameTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Name: "
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/emailTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/emailTitle" />
+
+                <TextView
+                    android:id="@+id/nameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="nameText"
+                    app:layout_constraintBottom_toBottomOf="@+id/nameTitle"
+                    app:layout_constraintStart_toEndOf="@+id/nameTitle"
+                    app:layout_constraintTop_toTopOf="@+id/nameTitle" />
+
+                <TextView
+                    android:id="@+id/phoneTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Phone: "
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/nameTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/nameTitle" />
+
+                <TextView
+                    android:id="@+id/phoneText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="phoneText"
+                    app:layout_constraintBottom_toBottomOf="@+id/phoneTitle"
+                    app:layout_constraintStart_toEndOf="@+id/phoneTitle"
+                    app:layout_constraintTop_toTopOf="@+id/phoneTitle" />
+
+                <TextView
+                    android:id="@+id/ratingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ratingText"
+                    app:layout_constraintBottom_toBottomOf="@+id/ratingTitle"
+                    app:layout_constraintStart_toEndOf="@+id/ratingTitle" />
+
+                <TextView
+                    android:id="@+id/ratingTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Rating: "
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/nameTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/phoneTitle" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/preferredJobsLayout"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.508"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/primaryLayout">
+
+                <TextView
+                    android:id="@+id/preferredJobsTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Preferred Jobs"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/preferenceInfoText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Get notifications about new jobs from the preference filters below"
+                    android:textStyle="italic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/preferredJobsTitle" />
+
+                <TextView
+                    android:id="@+id/locationTitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Location"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/preferenceInfoText" />
+
+                <Switch
+                    android:id="@+id/halifaxSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Halifax"
+                    android:textColor="?colorOnPrimary"
+                    android:theme="@style/SwitchTheme"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/locationTitleText" />
+
+                <Switch
+                    android:id="@+id/darmouthSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dartmouth"
+                    android:textColor="?colorOnPrimary"
+                    android:theme="@style/SwitchTheme"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/halifaxSwitch" />
+
+                <Switch
+                    android:id="@+id/bedfordSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bedford"
+                    android:textColor="?colorOnPrimary"
+                    android:theme="@style/SwitchTheme"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/darmouthSwitch" />
+
+                <TextView
+                    android:id="@+id/typeTitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Type"
+                    android:textColor="?colorOnPrimary"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/bedfordSwitch" />
+
+                <Switch
+                    android:id="@+id/partTimeSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Part time"
+                    android:textColor="?colorOnPrimary"
+                    android:theme="@style/SwitchTheme"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/typeTitleText" />
+
+                <Switch
+                    android:id="@+id/fullTimeSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Full time"
+                    android:textColor="?colorOnPrimary"
+                    android:theme="@style/SwitchTheme"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/partTimeSwitch" />
+
+                <Switch
+                    android:id="@+id/contractSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Contract"
+                    android:textColor="?colorOnPrimary"
+                    android:theme="@style/SwitchTheme"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/fullTimeSwitch" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

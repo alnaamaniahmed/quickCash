@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/appHeader"
+        layout="@layout/header_quick_cash"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/registrationTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:text="Register"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/errorText"
+        android:layout_width="325dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="52dp"
+        android:gravity="bottom"
+        android:textColor="@color/soft_error_red"
+        app:layout_constraintEnd_toEndOf="@+id/registrationTitle"
+        app:layout_constraintStart_toStartOf="@+id/registrationTitle"
+        app:layout_constraintTop_toBottomOf="@+id/registrationTitle" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textLayout_regEmail"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/errorText"
+        app:layout_constraintStart_toStartOf="@+id/errorText"
+        app:layout_constraintTop_toBottomOf="@+id/errorText">
+
+        <EditText
+            android:id="@+id/emailField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="@string/HINT_EMAIL"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textLayout_regPass"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/textLayout_regEmail"
+        app:layout_constraintStart_toStartOf="@+id/textLayout_regEmail"
+        app:layout_constraintTop_toBottomOf="@+id/textLayout_regEmail">
+
+        <EditText
+            android:id="@+id/passwordField"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="@string/HINT_PASSWORD"
+            android:inputType="textPassword"
+            android:minHeight="48dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textLayout_regName"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/textLayout_regPass"
+        app:layout_constraintStart_toStartOf="@+id/textLayout_regPass"
+        app:layout_constraintTop_toBottomOf="@+id/textLayout_regPass">
+
+        <EditText
+            android:id="@+id/nameField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/HINT_NAME"
+            android:inputType="text"
+            android:minHeight="48dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textLayout_regPhone"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/textLayout_regName"
+        app:layout_constraintStart_toStartOf="@+id/textLayout_regName"
+        app:layout_constraintTop_toBottomOf="@+id/textLayout_regName">
+
+        <EditText
+            android:id="@+id/phoneField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/HINT_PHONE"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:minHeight="48dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/roleSpinner"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="5dp"
+        android:entries="@array/ROLE_SPINNER_ENTRIES"
+        app:layout_constraintEnd_toEndOf="@+id/textLayout_regPhone"
+        app:layout_constraintStart_toStartOf="@+id/textLayout_regPhone"
+        app:layout_constraintTop_toBottomOf="@+id/textLayout_regPhone" />
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/cash_green_dark"
+        android:onClick="onClick"
+        android:text="@string/REGISTER_BUTTON_TEXT"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/roleSpinner"
+        app:layout_constraintStart_toStartOf="@+id/roleSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/roleSpinner" />
+
+    <TextView
+        android:id="@+id/loginLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:autoLink="web"
+        android:clickable="true"
+        android:focusable="true"
+        android:minHeight="48dp"
+        android:onClick="onClick"
+        android:text="@string/LOGIN_LINK"
+        android:textColor="@color/cash_green_dark"
+        android:textColorLink="@color/link_color"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/registerButton"
+        app:layout_constraintStart_toStartOf="@+id/registerButton"
+        app:layout_constraintTop_toBottomOf="@+id/registerButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

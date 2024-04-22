@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/appHeader"
+        layout="@layout/header_quick_cash"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/loginTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:text="Login"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Email Input -->
+
+    <TextView
+        android:id="@+id/statusLabel"
+        android:layout_width="325dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="52dp"
+        android:gravity="bottom"
+        android:text=""
+        android:textColor="@color/soft_error_red"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/loginTitle"
+        app:layout_constraintStart_toStartOf="@+id/loginTitle"
+        app:layout_constraintTop_toBottomOf="@+id/loginTitle" />
+
+    <!-- Password Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textLayout_loginEmail"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/statusLabel"
+        app:layout_constraintStart_toStartOf="@+id/statusLabel"
+        app:layout_constraintTop_toBottomOf="@+id/statusLabel">
+
+        <EditText
+            android:id="@+id/emailInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/HINT_EMAIL"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            app:layout_constraintWidth_percent="0.9" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/textLayout_loginEmail"
+        app:layout_constraintStart_toStartOf="@+id/textLayout_loginEmail"
+        app:layout_constraintTop_toBottomOf="@+id/textLayout_loginEmail">
+
+        <EditText
+            android:id="@+id/passwordInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            app:layout_constraintWidth_percent="0.9" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Sign In Button -->
+    <!-- Forgot Password -->
+    <!--android:onClick="onForgotPasswordClicked" Doesn't exist yet -->
+
+    <!-- Sign Up Link -->
+    <!--android:onClick="onSignUpClicked" Doesn't exist yet -->
+
+    <Spinner
+        android:id="@+id/roleSpinner"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="5dp"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <Button
+        android:id="@+id/signInButton"
+        android:layout_width="112dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/cash_green_dark"
+        android:text="SIGN IN"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/roleSpinner"
+        app:layout_constraintStart_toStartOf="@+id/roleSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/roleSpinner"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <TextView
+        android:id="@+id/forgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:autoLink="web"
+        android:clickable="true"
+        android:focusable="true"
+        android:minHeight="48dp"
+        android:text="@string/PASSWORD_RESET_LINK"
+        android:textColor="@color/cash_green_dark"
+        android:textColorLink="@color/link_color"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/signInButton"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/signInButton"
+        app:layout_constraintTop_toBottomOf="@+id/signInButton" />
+
+    <TextView
+        android:id="@+id/signUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:clickable="true"
+        android:focusable="true"
+        android:minHeight="48dp"
+        android:text="@string/REGISTER_LINK"
+        android:textColor="@color/cash_green_dark"
+        android:textColorLink="@color/link_color"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/forgotPassword"
+        app:layout_constraintStart_toStartOf="@+id/forgotPassword"
+        app:layout_constraintTop_toBottomOf="@+id/forgotPassword" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

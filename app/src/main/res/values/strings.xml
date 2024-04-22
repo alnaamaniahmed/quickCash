@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">Quick Cash</string>
+
+    <!-- UI Component Text -->
+    <string name="EMPTY_STRING"></string>
+    <string name="DOLLAR_SIGN">$</string>
+    <string-array name="ROLE_SPINNER_ENTRIES">
+        <item>Select your role</item>
+        <item>Employee</item>
+        <item>Employer</item>
+    </string-array>
+    <string-array name="JOB_FILTER_SPINNER_ENTRIES">
+        <item>Title</item>
+        <item>Newest</item>
+        <item>Location: Halifax</item>
+        <item>Location: Dartmouth</item>
+        <item>Location: Bedford</item>
+        <item>Type: Part time</item>
+        <item>Type: Full time</item>
+        <item>Type: Contract</item>
+        <item>Salary: High to low</item>
+        <item>Salary: Low to high</item>
+    </string-array>
+    <string name="JOB_PART_TIME">Part time</string>
+    <string name="JOB_FULL_TIME">Full time</string>
+    <string name="JOB_CONTRACT">Contract</string>
+    <string name="JOB_LOCATION_DEMO">CityName,\nA0A 0A0</string>
+    <string name="type_your_message">Type your message...</string>
+    <string name="RATING_PLACEHOLDER">/0</string>
+
+    <!-- Header Text -->
+    <string name="RESET_PASSWORD">Reset Password</string>
+    <string name="JOB_SEARCH_FILTER">Filter results by:</string>
+    <string name="JOB_QUESTIONS">Application Questions (Optional)</string>
+    <string name="JOB_TYPE">Job Type</string>
+    <string name="JOB_LOCATION">Job Location</string>
+    <string name="JOB_MAP_VIEW">View on map: </string>
+    <string name="JOB_APPLICATION">Job Application</string>
+    <string name="TITLE_ABOUT_APP">About App</string>
+    <string name="TITLE_ACCOUNT_SETTINGS">Account Settings</string>
+    <string name="RATE">Rate</string>
+
+
+    <!-- Button Text -->
+    <string name="RESET">Reset</string>
+    <string name="REGISTER_BUTTON_TEXT">Register</string>
+    <string name="FIND_JOB">Find Job</string>
+    <string name="VIEW_JOB">View Job</string>
+    <string name="POST_JOB">Post Job</string>
+    <string name="PUBLISH">Publish</string>
+    <string name="APPLY">Apply</string>
+    <string name="CANCEL">Cancel</string>
+    <string name="SHORTLIST">Shortlist</string>
+    <string name="DENY">Deny</string>
+    <string name="send">Send</string>
+    <string name="ACCEPT">Accept</string>
+    <string name="DECLINE">Decline</string>
+    <string name="MARK_AS_COMPLETED">Mark as Completed</string>
+    <string name="PREFER">PREFER</string>
+    <string name="MAKE_PAYMENT">Make Payment</string>
+
+    <!-- Link Text -->
+    <string name="REGISTER_LINK">Don\'t have an account? Sign up</string>
+    <string name="PASSWORD_RESET_LINK">Forgot password?</string>
+    <string name="LOGIN_LINK">Already a member? Log in</string>
+    <string name="WRONG_EMAIL_LINK">Not you? Log in with your email</string>
+    <string name="RESEND_EMAIL_LINK">Didn\'t get the email? Resend</string>
+    <string name="CHANGE">Change</string>
+
+    <!-- UI Hint Text -->
+    <string name="HINT_EMAIL">Email Address</string>
+    <string name="HINT_PASSWORD">Password</string>
+    <string name="HINT_NAME">Name</string>
+    <string name="HINT_PHONE">Phone Number</string>
+    <string name="HINT_SEARCH_JOB">Search for a job</string>
+    <string name="HINT_JOB_TITLE">Job Title</string>
+    <string name="HINT_JOB_DESCRIPTION">Description: </string>
+    <string name="HINT_JOB_SALARY">Salary</string>
+    <string name="EMPLOYER_EMAIL">Employer Email</string>
+    <string name="SELECT_PDF">Select your PDF file</string>
+
+    <!-- Error Messages -->
+    <string name="EMPTY_USERNAME">Please enter a username</string>
+    <string name="EMPTY_EMAIL_ADDRESS">Please enter your email</string>
+    <string name="INVALID_EMAIL_ADDRESS">Invalid email address</string>
+    <string name="EMPTY_PASSWORD">Please enter a password</string>
+    <string name="INVALID_PASSWORD">A password must be at least 8 characters long</string>
+    <string name="EMPTY_NAME">Please enter your name</string>
+    <string name="EMPTY_PHONE_NUMBER">Please enter a contact number</string>
+    <string name="INVALID_PHONE_NUMBER">A phone number must be exactly 10 characters long</string>
+    <string name="INVALID_ROLE">Please select a role</string>
+    <string name="EMAIL_NOT_FOUND">Email address does not exist in our records</string>
+    <string name="EMAIL_ALREADY_IN_USE">That email already exists in the database</string>
+    <string name="failed_to_send_message">Failed to send the message.</string>
+
+    <!--Dialog Text-->
+    <string name="MARK_JOB_COMPLETE_TITLE">Mark Job Complete</string>
+    <string name="MARK_JOB_COMPLETE_MESSAGE">Do you want to mark this job as complete?</string>
+    <string name="MARK_JOB_COMPLETE_POSITIVE">Complete</string>
+    <string name="MARK_JOB_COMPLETE_NEGATIVE">No</string>
+
+    <string name="title_activity_maps">MapsActivity</string>
+
+    <!--Rating-->
+    <string name="channel_name">RatingChannel</string>
+    <string name="channel_description">Channel for rating notifications</string>
+    
+</resources>

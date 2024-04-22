@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:colorPrimary">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"></LinearLayout>
+
+        <ImageView
+            android:id="@+id/quickCashIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/quick_cash_icon_alpha" />
+
+        <TextView
+            android:id="@+id/text_q"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="sans-serif-black"
+            android:shadowColor="#000000"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="5"
+            android:text="Q"
+            android:textColor="@color/quick_gold"
+            android:textSize="34sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="@+id/quickCashIcon"
+            app:layout_constraintStart_toEndOf="@+id/quickCashIcon"
+            app:layout_constraintTop_toTopOf="@+id/quickCashIcon" />
+
+        <TextView
+            android:id="@+id/text_uick"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-6dp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="sans-serif-black"
+            android:shadowColor="#000000"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="5"
+            android:text="uick"
+            android:textColor="@color/quick_gold"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="@+id/text_q"
+            app:layout_constraintStart_toEndOf="@+id/text_q" />
+
+        <TextView
+            android:id="@+id/text_c"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-4dp"
+            android:fontFamily="sans-serif-medium"
+            android:shadowColor="#000000"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="5"
+            android:text="C"
+            android:textColor="@color/cash_green"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/quickCashIcon"
+            app:layout_constraintStart_toEndOf="@+id/text_uick"
+            app:layout_constraintTop_toTopOf="@+id/quickCashIcon" />
+
+        <TextView
+            android:id="@+id/text_ash"
+            android:layout_width="65dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="-8dp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="sans-serif-medium"
+            android:shadowColor="#000000"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="5"
+            android:text="ash"
+            android:textColor="@color/cash_green"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/text_c"
+            app:layout_constraintStart_toEndOf="@+id/text_c" />
+
+        <ImageView
+            android:id="@+id/accountButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/homeButton"
+            app:layout_constraintEnd_toStartOf="@+id/homeButton"
+            app:layout_constraintTop_toTopOf="@+id/homeButton"
+            app:srcCompat="@drawable/user" />
+
+        <ImageView
+            android:id="@+id/homeButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="5dp"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/menuButton"
+            app:layout_constraintEnd_toStartOf="@+id/menuButton"
+            app:layout_constraintTop_toTopOf="@+id/menuButton"
+            app:srcCompat="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/menuButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/menu" />
+
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="10dp"
+            app:layout_constraintStart_toStartOf="@+id/quickCashIcon"
+            app:layout_constraintTop_toBottomOf="@+id/quickCashIcon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

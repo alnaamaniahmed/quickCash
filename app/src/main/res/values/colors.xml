@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="dark_grey">#222227</color>
+    <color name="silver">#C5C5C5</color>
+    <color name="light_grey">#DDDDEE</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="link_color">#673AB7</color>
+    <color name="cash_green">#64C832</color>
+    <color name="cash_green_dark">#43911D</color>
+    <color name="quick_gold">#FAC800</color>
+    <color name="quick_gold_dark">#CF800A</color>
+    <color name="soft_error_red">#CE5B56</color>
+    <color name="medium_gray_sender">#666666</color>
+    <color name="red_button">#FF0000</color>
+
+
+
+
+
+</resources>

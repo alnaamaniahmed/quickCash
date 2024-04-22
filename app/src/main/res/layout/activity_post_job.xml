@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/menuHolder"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuHolder"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/postJobTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="@string/POST_JOB"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/jobErrorMessage"
+                android:layout_width="325dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="32dp"
+                android:gravity="bottom"
+                android:textColor="@color/soft_error_red"
+                app:layout_constraintEnd_toEndOf="@+id/postJobTitle"
+                app:layout_constraintStart_toStartOf="@+id/postJobTitle"
+                app:layout_constraintTop_toBottomOf="@+id/postJobTitle" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textLayout_title"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/HINT_JOB_TITLE"
+                app:layout_constraintEnd_toEndOf="@+id/jobErrorMessage"
+                app:layout_constraintStart_toStartOf="@+id/jobErrorMessage"
+                app:layout_constraintTop_toBottomOf="@+id/jobErrorMessage">
+
+                <EditText
+                    android:id="@+id/jobTitleField"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:imeOptions="actionDone"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textLayout_description"
+                android:layout_width="350dp"
+                android:layout_height="125dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/textLayout_title"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="@+id/textLayout_title"
+                app:layout_constraintTop_toBottomOf="@+id/textLayout_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/jobDescriptionField"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="top|left"
+                    android:hint="@string/HINT_JOB_DESCRIPTION" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/questionsTitle"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/JOB_QUESTIONS"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/textLayout_description"
+                app:layout_constraintStart_toStartOf="@+id/textLayout_description"
+                app:layout_constraintTop_toBottomOf="@+id/textLayout_description" />
+
+            <LinearLayout
+                android:id="@+id/questionsLayout"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/questionsTitle">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/questionRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/addQuestionCell"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/addQuestionButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:srcCompat="@android:drawable/ic_input_add" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/jobTypeTitle"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:text="@string/JOB_TYPE"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textLayout_description"
+                app:layout_constraintTop_toBottomOf="@+id/questionsLayout" />
+
+            <RadioGroup
+                android:id="@+id/jobTypeRGroup"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/jobTypeTitle"
+                app:layout_constraintTop_toBottomOf="@+id/jobTypeTitle">
+
+                <RadioButton
+                    android:id="@+id/partTimeRButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/JOB_PART_TIME" />
+
+                <RadioButton
+                    android:id="@+id/fullTimeRButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/JOB_FULL_TIME" />
+
+                <RadioButton
+                    android:id="@+id/contractRButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/JOB_CONTRACT" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/jobLocationTitle"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:text="@string/JOB_LOCATION"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/textLayout_description"
+                app:layout_constraintTop_toBottomOf="@+id/questionsLayout" />
+
+            <TextView
+                android:id="@+id/dollarSignText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="$"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textLayout_salary"
+                app:layout_constraintEnd_toStartOf="@+id/textLayout_salary"
+                app:layout_constraintTop_toTopOf="@+id/textLayout_salary" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textLayout_salary"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="76dp"
+                android:hint="@string/HINT_JOB_SALARY"
+                app:layout_constraintBottom_toBottomOf="@+id/jobTypeRGroup"
+                app:layout_constraintEnd_toEndOf="@+id/questionsLayout"
+                app:layout_constraintTop_toBottomOf="@+id/textLayout_description"
+                app:layout_constraintVertical_bias="1.0">
+
+                <EditText
+                    android:id="@+id/salaryField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/publishJobButton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/cash_green_dark"
+                android:text="@string/PUBLISH"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/jobTypeRGroup"
+                app:layout_constraintTop_toBottomOf="@+id/jobTypeRGroup" />
+
+            <Button
+                android:id="@+id/cancelJobButton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:backgroundTint="#CF800A"
+                android:text="@string/CANCEL"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@+id/publishJobButton"
+                app:layout_constraintTop_toTopOf="@+id/publishJobButton" />
+
+            <Spinner
+                android:id="@+id/locationSpinner"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/jobLocationTitle"
+                app:layout_constraintTop_toBottomOf="@+id/jobLocationTitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

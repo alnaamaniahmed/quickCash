@@ -1,0 +1,83 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+}
+apply plugin: 'com.google.firebase.crashlytics'
+android {
+    namespace 'com.example.quickcash'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.quickcash"
+        minSdk 30
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildToolsVersion '34.0.0'
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.firebase:firebase-database:20.3.1'
+    implementation 'com.google.firebase:firebase-auth:22.3.1'
+    implementation 'androidx.test:core:1.5.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    /Firebase/
+    implementation 'com.google.firebase:firebase-database:20.3.1'
+    implementation 'com.google.firebase:firebase-auth:22.3.1'
+    implementation 'com.google.firebase:firebase-storage:20.3.0'
+    //3rd party library - for network request or api request to the firebase server
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.google.firebase:firebase-messaging:23.4.1'
+    //for getting the error messages related to firebase
+    implementation 'com.google.firebase:firebase-crashlytics:18.6.2'
+    implementation 'com.google.firebase:firebase-analytics:21.5.1'
+
+    implementation 'com.firebaseui:firebase-ui-database:8.0.0'
+
+    androidTestImplementation 'org.mockito:mockito-core:3.0.0'
+
+    /JUnit/
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation project(path: ':app')
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+
+    /Espresso/
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-intents:3.0.2'
+    implementation 'androidx.test.espresso:espresso-contrib:3.5.1'
+
+    /UI Automator library/
+    androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.3.0'\
+
+    androidTestImplementation project(path: ':app')
+
+    /Google Maps/
+    implementation 'com.google.android.gms:play-services-maps:18.2.0'
+
+    /paypal/
+    implementation 'com.paypal.sdk:paypal-android-sdk:2.16.0'
+}
