@@ -7,8 +7,7 @@
   <img src="https://github.com/alnaamaniahmed/quickCash/blob/main/employer.svg?raw=true" alt="Employer Image" width="400" height="400">
 </div>
 <hr />
-## Setting Up and Running QuickCash Android App
-
+## Setting Up and Running QuickCash Android Application
 To get the QuickCash Android app up and running on your local machine, follow these simple steps:
 
 ### Step 1: Download Android Studio
